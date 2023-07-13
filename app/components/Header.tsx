@@ -2,8 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { GiHamburgerMenu } from "react-icons/Gi";
-import { AiOutlineClose } from "react-icons/Ai";
+
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+
 import Footer from "./Footer";
 const Header = () => {
   const pathname = usePathname();
@@ -48,13 +50,13 @@ const Header = () => {
   return (
     <div className="fixed right-0 top-0">
       <button
-        className="lg:hidden  bg-lime-300 text-white py-2 px-4 rounded"
+        className="lg:hidden  bg-lime-500 text-white py-2 px-4 rounded"
         onClick={toggleMenu}
       >
         {isMenuOpen ? (
-          <AiOutlineClose size={20} />
+          <CloseIcon fontSize="large" />
         ) : (
-          <GiHamburgerMenu size={20} />
+          <MenuIcon fontSize="large" />
         )}
       </button>
       <div

@@ -67,7 +67,7 @@ function CrudWithoutDb() {
 
   return (
     <div>
-      <table className="table w-4/5 border-collapse mt-10 my-auto">
+      <table className="table lg:w-4/5 border-collapse mt-10 my-auto">
         <thead className="bg-lime-50 font-bold py-10 text-left border-b border-slate-300">
           <tr className="">
             <th className="py-2 w-2/12">ID</th>
@@ -186,7 +186,7 @@ function EditForm({ data, onSave, onCancel }) {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="border rounded  px-2 py-1"
+          className="border rounded w-full   px-2 py-1"
         />
       </div>
       <div className="flex mt-2">
@@ -199,18 +199,18 @@ function EditForm({ data, onSave, onCancel }) {
           value={age}
           onChange={(e) => setAge(e.target.value)}
           required
-          className="border rounded px-2 py-1"
+          className=" w-full border rounded px-2 py-1"
         />
       </div>
       <button
         onClick={handleSave}
-        className="mt-2 bg-lime-400 hover:bg-lime-500  text-white px-5 py-2 font-bold  rounded"
+        className="mt-2 bg-lime-400 hover:bg-lime-500  text-white md:px-5 py-2 font-bold  rounded"
       >
         Save
       </button>
       <button
         onClick={onCancel}
-        className="mt-2 ml-2 bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+        className="mt-2 ml-2 bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 md:px-4 rounded"
       >
         Cancel
       </button>
