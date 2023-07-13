@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={poppins.className}>
         <div className='mx-auto px-5'>   
           <Header />
+         
           <div className="lg:pl-64 mt-5 px-3">      
           {children}
           </div> 

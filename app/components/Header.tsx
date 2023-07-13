@@ -31,8 +31,12 @@ const Header = () => {
     //   href: "/posts",
     // },
     {
-      label: "Crud",
+      label: "Crud With DB",
       href: "/crud",
+    },
+    {
+      label: "Crud Without DB",
+      href: "/crudwithoutdb",
     },
   ];
 
@@ -54,7 +58,7 @@ const Header = () => {
         )}
       </button>
       <div
-        className={`fixed top-0 left-0 bg-sky-700 w-64 p-2 h-screen pt-32 overflow-hidden transition-transform text-center duration-300 transform ${
+        className={`fixed top-0 left-0 bg-sky-700 w-64 p-2 h-screen pt-28 overflow-hidden transition-transform text-center duration-300 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full h-screen"
         } lg:translate-x-0 lg:w-64 lg:h-screen lg:overflow-visible`}
       >

@@ -38,7 +38,7 @@ const AddPost = () => {
     <div>
       <button
         onClick={() => setModalOpen(true)}
-        className="bg-lime-500 text-white p-3 cursor-pointer text-lg"
+        className=" bg-lime-400 hover:bg-lime-500 text-white p-3 cursor-pointer text-lg"
       >
         Add New Course
       </button>

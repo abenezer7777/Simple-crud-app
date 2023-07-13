@@ -17,6 +17,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
+    "react-modal": "^3.16.1",
     "react-query": "^3.39.3",
     "react-table": "^7.8.0",
     "react-tsparticles": "^2.10.1",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
+    "@types/react-modal": "^3.16.0",
     "@types/react-query": "^1.2.9",
     "@types/react-table": "^7.7.14",
     "prisma": "^4.15.0",

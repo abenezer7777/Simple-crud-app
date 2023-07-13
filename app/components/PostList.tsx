@@ -44,7 +44,7 @@ const PostList = ({ posts }) => {
             return (
               <tr {...row.getRowProps()} className='hover:bg-lime-50'>
                 {row.cells.map((cell) => (
-                  <td {...cell.getCellProps()} className='text-left border-b border-slate-300'>{cell.render('Cell')}</td>
+                  <td {...cell.getCellProps()} className='text-left border-b border-slate-300 pr-5'>{cell.render('Cell')}</td>
                 ))}
               </tr>
             );
