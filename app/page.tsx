@@ -1,11 +1,10 @@
 import React from 'react'
 import TextAnnimation from "./components/TextAnnimation"
-import Particle from "./components/Particles"
 const HomePage = () => {
   
   return (
     <div className="flex flex-col items-center justify-center h-full">
-        {/* <Particle/> */}
+        
       <div className="mb-4">
         <img
           src="https://www.ethiotelecom.et/wp-content/uploads/2021/04/TeleBirr-Logo.svg"
