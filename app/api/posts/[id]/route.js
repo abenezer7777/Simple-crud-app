@@ -11,18 +11,19 @@ export const GET = async (request, { params }) => {
             id
         }
     });
-
+       
     if(!post) {
         return NextResponse.json(
             {message: "Post not found", err},
             {status: 404}
         )
     }
-
+ 
     return NextResponse.json(post);
   } catch (err) {
     return NextResponse.json({ message: "GET Error", err }, { status: 500 });
   }
+  
 };
 
 export const PATCH = async (request, {params}) => {
@@ -48,7 +49,7 @@ export const PATCH = async (request, {params}) => {
                 {status: 404}
             )
         }
-
+ 
         return NextResponse.json(updatePost);
 
     } catch(err) {

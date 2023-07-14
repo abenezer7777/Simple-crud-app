@@ -15,7 +15,7 @@ export const POST = async (request) => {
         })
 
         return NextResponse.json(newPost);
-
+ 
     } catch(err) {
         return NextResponse.json({message: "POST Error", err}, {status: 500})
     }
