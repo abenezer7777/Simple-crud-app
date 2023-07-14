@@ -3,7 +3,8 @@ import AddPost from '../components/AddPost'
 import PostList from '../components/PostList'
 
 async function getData() {
-    const res = await fetch("http://localhost:3000/api/posts", { cache: 'no-store' });
+  const apiUrl=process.env.API_URL;
+    const res = await fetch(`${apiUrl}/api/posts`, { cache: 'no-store' });
 
     if(!res.ok) {
         throw new Error("Failed to fetch data")
