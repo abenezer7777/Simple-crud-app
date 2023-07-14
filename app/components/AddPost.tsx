@@ -12,7 +12,7 @@ const AddPost = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [inputs, setInputs] = useState({});
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     axios
       .post("/api/posts", inputs)
@@ -29,7 +29,7 @@ const AddPost = () => {
       });
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const name = e.target.name;
     const value = e.target.value;
     setInputs((prevState) => ({ ...prevState, [name]: value }));
