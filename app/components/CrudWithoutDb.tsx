@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from "react-query";
-import { getAllData, addData, updateData, deleteData } from "../api/route";
+import { getAllData, addData, updateData, deleteData } from "../api/users/Route";
 import React, { useState } from "react";
 import Modal from "./Modal"; // Import your custom Modal component
 

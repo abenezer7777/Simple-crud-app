@@ -1,7 +1,7 @@
 let data = [
-  { id: 1, name: "John Doe", age: 25 },
-  { id: 2, name: "Jane Smith", age: 30 },
-  { id: 3, name: "Bob Johnson", age: 35 },
+  { id: 1, name: "Abebe Kebede", age: 25 },
+  { id: 2, name: "Hacalu calla", age: 30 },
+  { id: 3, name: "Kebede Abebe", age: 35 },
 ];
 
 export function getAllData() {
