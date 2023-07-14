@@ -24,7 +24,7 @@ async function getUsersData() {
 const Posts = async () => {
 
     // const posts = await getPostsData();
-    const [posts, users] = await Promise.all([getPostsData(), getUsersData()]);
+    const [posts, users]:any = await Promise.all([getPostsData(), getUsersData()]);
 
   return (
     <div>
@@ -33,14 +33,14 @@ const Posts = async () => {
         <h2 className='text-2xl'>Users</h2>
 
         {
-            users.map((user, index) => (
+            users.map((user:any, index:any) => (
                 <p key={index}>{user.name}</p>
             ))
         }
 
         <ul className='flex flex-col gap-5'>
             {
-                posts.map(post => (
+                posts.map((post:any) => (
                     <Link key={post.id} href={`/posts/${post.id}`}>
                         <li className='bg-gray-100 p-5 cursor-pointer'>
                             <h4 className='text-xl font-bold'>{post.title}</h4>

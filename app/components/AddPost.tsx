@@ -32,7 +32,7 @@ const AddPost = () => {
   const handleChange = (e:any) => {
     const name = e.target.name;
     const value = e.target.value;
-    setInputs((prevState) => ({ ...prevState, [name]: value }));
+    setInputs((prevState:any) => ({ ...prevState, [name]: value }));
   };
   return (
     <div>

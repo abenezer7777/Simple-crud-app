@@ -10,14 +10,14 @@ function CrudWithoutDb() {
 
   const addMutation = useMutation(addData, {
     onSuccess: (newData) => {
-      queryClient.setQueryData("data", (prevData) => [...prevData, newData]);
+      queryClient.setQueryData("data", (prevData:any) => [...prevData, newData]);
     },
   });
 
   const updateMutation = useMutation(updateData, {
     onSuccess: (updatedData) => {
-      queryClient.setQueryData("data", (prevData) => {
-        const index = prevData.findIndex((item) => item.id === updatedData.id);
+      queryClient.setQueryData("data", (prevData:any) => {
+        const index = prevData.findIndex((item:any) => item.id === updatedData.id);
         if (index !== -1) {
           prevData[index] = updatedData;
         }
@@ -28,27 +28,27 @@ function CrudWithoutDb() {
 
   const deleteMutation = useMutation(deleteData, {
     onSuccess: (deletedData) => {
-      queryClient.setQueryData("data", (prevData) => {
-        return prevData.filter((item) => item.id !== deletedData.id);
+      queryClient.setQueryData("data", (prevData:any) => {
+        return prevData.filter((item:any) => item.id !== deletedData.id);
       });
     },
   });
 
-  const handleAddData = (newData) => {
+  const handleAddData = (newData:any) => {
     addMutation.mutate(newData);
   };
 
-  const handleUpdateData = (updatedData) => {
+  const handleUpdateData = (updatedData:any) => {
     updateMutation.mutate(updatedData);
   };
 
-  const handleDeleteData = (id) => {
+  const handleDeleteData = (id:any) => {
     deleteMutation.mutate(id);
   };
 
   const [editData, setEditData] = useState(null);
 
-  const handleEdit = (data) => {
+  const handleEdit = (data:any) => {
     setEditData(data);
   };
 
@@ -56,7 +56,7 @@ function CrudWithoutDb() {
     setEditData(null);
   };
 
-  const handleSaveEdit = (updatedData) => {
+  const handleSaveEdit = (updatedData:any) => {
     handleUpdateData(updatedData);
     handleCancelEdit();
   };
@@ -77,7 +77,7 @@ function CrudWithoutDb() {
           </tr>
         </thead>
         <tbody>
-          {data.map((item) => (
+          {data.map((item:any) => (
             <tr key={item.id}>
               <td className="py-2 border-b">{item.id}</td>
               <td className="py-2 border-b">{item.name}</td>
@@ -117,8 +117,8 @@ function CrudWithoutDb() {
   );
 }
 
-function AddForm({ onSubmit }) {
-  const handleSubmit = (e) => {
+function AddForm({ onSubmit }:any) {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const newData = {
@@ -164,7 +164,7 @@ function AddForm({ onSubmit }) {
   );
 }
 
-function EditForm({ data, onSave, onCancel }) {
+function EditForm({ data, onSave, onCancel }:any) {
   const [name, setName] = useState(data.name);
   const [age, setAge] = useState(data.age);
 
