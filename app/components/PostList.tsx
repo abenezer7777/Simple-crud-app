@@ -3,7 +3,7 @@ import React from 'react';
 import { useTable } from 'react-table';
 import Post from './Post';
 
-const PostList = ({ posts }) => {
+const PostList = ({ posts }:any) => {
   const columns = React.useMemo(
     () => [
       {
@@ -53,7 +53,7 @@ const PostList = ({ posts }) => {
       </table>
 
       <ul>
-        {posts.map((post) => (
+        {posts.map((post:any) => (
           <Post key={post.id} post={post} />
         ))}
       </ul>

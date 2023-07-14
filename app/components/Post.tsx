@@ -6,7 +6,7 @@ import Modal from "./Modal";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-const Post = ({ post }) => {
+const Post = ({ post }:any) => {
   const router = useRouter();
 
   const [openModalEdit, setOpenModalEdit] = useState(false);
@@ -14,7 +14,7 @@ const Post = ({ post }) => {
 
   const [openModalDelete, setOpenModalDelete] = useState(false);
 
-  const handleEditSubmit = (e) => {
+  const handleEditSubmit = (e:any) => {
     e.preventDefault();
     axios
       .patch(`/api/posts/${post.id}`, postToEdit)
@@ -30,13 +30,13 @@ const Post = ({ post }) => {
       });
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const name = e.target.name;
     const value = e.target.value;
-    setPostToEdit((prevState) => ({ ...prevState, [name]: value }));
+    setPostToEdit((prevState:any) => ({ ...prevState, [name]: value }));
   };
 
-  const handleDeletePost = (id) => {
+  const handleDeletePost = (id:any) => {
     axios
     .delete(`/api/posts/${id}`)
     .then((res) => {

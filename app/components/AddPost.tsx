@@ -10,7 +10,7 @@ const AddPost = () => {
     const router = useRouter();
 
   const [modalOpen, setModalOpen] = useState(false);
-  const [inputs, setInputs] = useState({});
+  const [inputs, setInputs]:any = useState({});
 
   const handleSubmit = (e:any) => {
     e.preventDefault();
@@ -51,7 +51,7 @@ const AddPost = () => {
             placeholder="Title"
             name="title"
             className="w-full p-2"
-            value={inputs.title || ""}
+            value={inputs.title|| ""}
             onChange={handleChange}
           />
 

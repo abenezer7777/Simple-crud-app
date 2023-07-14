@@ -1,5 +1,5 @@
 import React from 'react'
-const Modal = ({ children, modalOpen, setModalOpen }) => {
+const Modal = ({ children, modalOpen, setModalOpen }:any) => {
   return (
     <>
       {modalOpen && (
