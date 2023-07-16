@@ -1,7 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from "react-query";
 import { getAllData, addData, updateData, deleteData } from "../api/users/Route";
 import React, { useState } from "react";
-import Modal from "./Modal"; // Import your custom Modal component
+import Modal from "./Modal"; 
 
 function CrudWithoutDb() {
   const queryClient = useQueryClient();
@@ -34,9 +34,11 @@ function CrudWithoutDb() {
     },
   });
 
-  const handleAddData = (newData:any) => {
+  const handleAddData = (newData: any) => {
+  if (!addMutation.isLoading) {
     addMutation.mutate(newData);
-  };
+  }
+};
 
   const handleUpdateData = (updatedData:any) => {
     updateMutation.mutate(updatedData);
@@ -45,7 +47,7 @@ function CrudWithoutDb() {
   const handleDeleteData = (id:any) => {
     deleteMutation.mutate(id);
   };
-
+g
   const [editData, setEditData] = useState(null);
 
   const handleEdit = (data:any) => {
@@ -66,8 +68,8 @@ function CrudWithoutDb() {
   }
 
   return (
-    <div>
-      <table className="table lg:w-4/5 border-collapse mt-10 my-auto">
+    <div className="overflow-hidden">
+      <table className="table lg:w-4/5 border-collapse mt-10 my-auto overflow-hidden">
         <thead className="bg-lime-50 font-bold py-10 text-left border-b border-slate-300">
           <tr className="">
             <th className="py-2 w-2/12">ID</th>
@@ -140,18 +142,18 @@ function AddForm({ onSubmit }:any) {
           type="text"
           name="name"
           required
-          className="border rounded px-2 py-1"
+          className="border rounded px-2 py-1 w-full md:w-60"
         />
       </div>
       <div className="flex mt-2">
-        <label htmlFor="age" className="mr-2 w-20">
+        <label htmlFor="age" className="mr-2 w-20 ">
           Age:
         </label>
         <input
           type="number"
           name="age"
           required
-          className="border rounded px-2 py-1"
+          className="border rounded px-2 py-1 w-full md:w-60 "
         />
       </div>
       <button

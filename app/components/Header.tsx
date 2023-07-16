@@ -50,7 +50,7 @@ const Header = () => {
   return (
     <div className="fixed right-0 top-0">
       <button
-        className="lg:hidden  bg-lime-500 text-white py-2 px-4 rounded"
+        className="lg:hidden stick hover:bg-black/20 text-black/80 py-1 px-2 rounded"
         onClick={toggleMenu}
       >
         {isMenuOpen ? (

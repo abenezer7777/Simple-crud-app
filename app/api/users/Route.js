@@ -3,15 +3,13 @@ let data = [
   { id: 2, name: "Hacalu calla", age: 30 },
   { id: 3, name: "Kebede Abebe", age: 35 },
 ];
-
 export function getAllData() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(data);
+      resolve([...data]); 
     }, 500);
   });
 }
-
 export function addData(newData) {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -22,7 +20,6 @@ export function addData(newData) {
     }, 500);
   });
 }
-
 export function updateData(updatedData) {
   return new Promise((resolve) => {
     setTimeout(() => {

@@ -4,7 +4,7 @@ import React from 'react'
 const AboutPage = () => {
     return (
       <div>
-        <h1 className="text-4xl font-bold bg-lime-400 text-white p-2 mt-10" >About Page</h1>
+        <h1 className="text-4xl font-bold bg-lime-400 text-white p-2 mt-20 max-w-3xl" >About Page</h1>
         <p className="py-10">
           This is our about page. Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever

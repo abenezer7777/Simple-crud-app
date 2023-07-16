@@ -12,7 +12,7 @@ const HomePage = () => {
         />
       </div>
       <span className="pl-5 w-full h-7 bg-lime-400"></span>
-      <div className="my-5 text-center text-sky-600 font-bold">
+      <div className="my-5 sm:py-5 text-center text-sky-600 font-bold">
        <TextAnnimation/>
       </div>
       <span className="w-full h-7 bg-lime-400"></span>
