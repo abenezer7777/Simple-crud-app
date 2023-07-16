@@ -47,7 +47,7 @@ function CrudWithoutDb() {
   const handleDeleteData = (id:any) => {
     deleteMutation.mutate(id);
   };
-g
+
   const [editData, setEditData] = useState(null);
 
   const handleEdit = (data:any) => {
