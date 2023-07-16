@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+.dark {
+  background-color:  #1f1f1f;
+  color: #ffffff;
+}
+.light-Header {
+  background-color: rgb(3 105 161);
+}
+
+.dark-header {
+  background-color: rgb(24,24,24);
+  color: #ffffff;
+}
+body{
+    font-weight: 400;   
+}

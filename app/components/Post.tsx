@@ -55,7 +55,7 @@ const Post = ({ post }:any) => {
     <li className="p-3 my-4" key={post.id}>
       <div className="pt-2 ">
         <button
-          className="text-blue-700 mr-3 mt-3 hover:bg-lime-100"
+          className="text-blue-700 mr-3 mt-3 hover:bg-sky-200"
           onClick={() => setOpenModalEdit(true)}
         >
           Edit
@@ -89,7 +89,7 @@ const Post = ({ post }:any) => {
           </form>
         </Modal>
 
-        <button onClick={() => setOpenModalDelete(true)} className="text-red-700 mr-3 hover:bg-lime-100">Delete</button>
+        <button onClick={() => setOpenModalDelete(true)} className="text-red-700 mr-3 hover:bg-sky-200">Delete</button>
 
         <Modal modalOpen={openModalDelete} setModalOpen={setOpenModalDelete}>
           <h1 className="text-2xl pb-3">

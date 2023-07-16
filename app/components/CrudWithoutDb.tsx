@@ -70,7 +70,7 @@ function CrudWithoutDb() {
   return (
     <div className="overflow-hidden">
       <table className="table lg:w-4/5 border-collapse mt-10 my-auto overflow-hidden">
-        <thead className="bg-lime-50 font-bold py-10 text-left border-b border-slate-300">
+        <thead className="bg-sky-300 font-bold py-10 text-left border-b border-slate-300">
           <tr className="">
             <th className="py-2 w-2/12">ID</th>
             <th className="py-2 w-2/5">Name</th>
@@ -80,7 +80,7 @@ function CrudWithoutDb() {
         </thead>
         <tbody>
           {data.map((item:any) => (
-            <tr key={item.id}>
+            <tr key={item.id} className=" hover:bg-sky-200">
               <td className="py-2 border-b">{item.id}</td>
               <td className="py-2 border-b">{item.name}</td>
               <td className="py-2 border-b">{item.age}</td>

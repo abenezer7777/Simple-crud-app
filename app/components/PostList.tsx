@@ -29,7 +29,7 @@ const PostList = ({ posts }:any) => {
   return (
     <div className='flex container'>
       <table {...getTableProps()} className="table w-full border-collapse">
-        <thead className='bg-lime-50 font-bold p-2 text-left border-b border-slate-300'>
+        <thead className='bg-sky-300 font-bold p-2 text-left border-b border-slate-300'>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
@@ -42,7 +42,7 @@ const PostList = ({ posts }:any) => {
           {rows.map((row) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()} className='hover:bg-lime-50'>
+              <tr {...row.getRowProps()} className='hover:bg-sky-200'>
                 {row.cells.map((cell) => (
                   <td {...cell.getCellProps()} className='text-left border-b border-slate-300 pr-5'>{cell.render('Cell')}</td>
                 ))}

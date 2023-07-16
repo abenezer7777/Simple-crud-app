@@ -1,8 +1,10 @@
 import React from 'react'
-import TextAnnimation from "./components/TextAnnimation"
+import TextAnnimation from "./components/TextAnnimation";
+
 const HomePage = () => {
   
   return (
+   
     <div className="flex flex-col items-center justify-center h-full">
         
       <div className="mb-4">
@@ -25,6 +27,7 @@ const HomePage = () => {
         </p>
       </div>
     </div>
+   
   );
 };
 

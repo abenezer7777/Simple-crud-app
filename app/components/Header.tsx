@@ -7,7 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 import Footer from "./Footer";
-const Header = () => {
+const Header = ({ isDarkMode }:any) => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -28,11 +28,7 @@ const Header = () => {
       label: "Contact",
       href: "/contact",
     },
-    // {
-    //   label: "Posts",
-    //   href: "/posts",
-    // },
-    {
+     {
       label: "Crud With DB",
       href: "/crud",
     },
@@ -50,7 +46,7 @@ const Header = () => {
   return (
     <div className="fixed right-0 top-0">
       <button
-        className="lg:hidden stick hover:bg-black/20 text-black/80 py-1 px-2 rounded"
+        className="lg:hidden stick hover:opacity-70 text-black/80 py-1 px-2 rounded"
         onClick={toggleMenu}
       >
         {isMenuOpen ? (
@@ -62,7 +58,7 @@ const Header = () => {
       <div
         className={`fixed top-0 left-0 bg-sky-700 w-64 p-2 h-screen pt-28 overflow-hidden transition-transform text-center duration-300 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full h-screen"
-        } lg:translate-x-0 lg:w-64 lg:h-screen lg:overflow-visible`}
+        } ${isDarkMode ? `dark-header` : `light-header`} lg:translate-x-0 lg:w-64 lg:h-screen lg:overflow-visible` }
       >
         <ul className="space-y-4  text-white   ">
           {navItems.map((link, index) => (
