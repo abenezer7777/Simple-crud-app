@@ -55,6 +55,7 @@ const Header = ({ isDarkMode }:any) => {
           <MenuIcon fontSize="large" />
         )}
       </button>
+      
       <div
         className={`fixed top-0 left-0 bg-sky-700 w-64 p-2 h-screen pt-28 overflow-hidden transition-transform text-center duration-300 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full h-screen"
