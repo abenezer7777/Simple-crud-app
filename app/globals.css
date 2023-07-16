@@ -20,4 +20,11 @@
 }
 body{
     font-weight: 400;   
+    font-family: Arial, sans-serif;
+}
+.dark input{
+    background-color: #000000;
+}
+.dark .togle{
+    color: white;
 }

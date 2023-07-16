@@ -46,7 +46,7 @@ const Header = ({ isDarkMode }:any) => {
   return (
     <div className="fixed right-0 top-0">
       <button
-        className="lg:hidden stick hover:opacity-70 text-black/80 py-1 px-2 rounded"
+        className="lg:hidden stick hover:opacity-70 text-black/80 py-1 px-2 rounded togle"
         onClick={toggleMenu}
       >
         {isMenuOpen ? (
