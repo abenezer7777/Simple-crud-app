@@ -93,7 +93,7 @@ const Post = ({ post }:any) => {
 
         <Modal modalOpen={openModalDelete} setModalOpen={setOpenModalDelete}>
           <h1 className="text-2xl pb-3">
-            Are you sure, You want to delete this post?
+            Are you sure, You want to delete this course?
           </h1>
 
           <div>
